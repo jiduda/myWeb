@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./App.css";
+import "../App.css";
+import { onMoveToForm } from "../hook/moveScroll";
 
 const Header = () => {
   const [hover, setHover] = useState(0);
@@ -11,6 +12,7 @@ const Header = () => {
           className={`HeaderButton${hover === 1 ? "On" : "Off"}`}
           onMouseEnter={() => setHover(1)}
           onMouseLeave={() => setHover(0)}
+          onClick={onMoveToForm}
         >
           Main
         </button>
