@@ -3,8 +3,12 @@ import "../App.css";
 const MainPage = () => {
   return (
     <div className="Main">
-      <div className="Main">React&React Native 개발자</div>
-      <div className="Main">김지원의 페이지입니다!</div>
+      <div className="Main-bgimg">
+        <div className="Main-text1">안녕하세요! </div>
+        <div className="Main-text2">RN Developer</div>
+        <div className="Main-text3">J-Log입니다.</div>
+        <button>Contact Me </button>
+      </div>
     </div>
   );
 };

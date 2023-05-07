@@ -1,27 +1,26 @@
 import { useState } from "react";
 import "../App.css";
-import { onMoveToForm } from "../hook/moveScroll";
 
 const Header = () => {
   const [hover, setHover] = useState(0);
   return (
     <div className="Header">
       <div className="main">J-LOG</div>
+      <div className="blank"></div>
       <div className="nav">
         <button
           className={`HeaderButton${hover === 1 ? "On" : "Off"}`}
           onMouseEnter={() => setHover(1)}
           onMouseLeave={() => setHover(0)}
-          onClick={onMoveToForm}
         >
-          Main
+          Home
         </button>
         <button
           className={`HeaderButton${hover === 2 ? "On" : "Off"}`}
           onMouseEnter={() => setHover(2)}
           onMouseLeave={() => setHover(0)}
         >
-          About Me
+          About
         </button>
         <button
           className={`HeaderButton${hover === 3 ? "On" : "Off"}`}
@@ -37,8 +36,14 @@ const Header = () => {
         >
           Info
         </button>
+        <button
+          className={`HeaderButton${hover === 5 ? "On" : "Off"}`}
+          onMouseEnter={() => setHover(5)}
+          onMouseLeave={() => setHover(0)}
+        >
+          Contact
+        </button>
       </div>
-      <div className="menu">Contact</div>
     </div>
   );
 };
